@@ -1,0 +1,9 @@
+[Unit]
+Description=For AcrossFromBlue alsa ndi streamer
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/alsa-ndi-stream hw:AcrossFromBlue,0 MicThree
+
+[Install]
+WantedBy=multi-user.target

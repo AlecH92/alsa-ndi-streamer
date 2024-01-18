@@ -1,0 +1,8 @@
+SUBSYSTEM!="sound", GOTO="my_usb_audio_end"
+ACTION!="add", GOTO="my_usb_audio_end"
+
+DEVPATH=="/devices/platform/soc/3f980000.usb/usb1/1-1/1-1.?/1-1.?.2/1-1.?.2:1.0/sound/card?", ATTR{id}="BlueLight", RUN+="/usr/bin/systemctl --no-block start bluelight.service"
+DEVPATH=="/devices/platform/soc/3f980000.usb/usb1/1-1/1-1.?/1-1.?.1/1-1.?.1:1.0/sound/card?", ATTR{id}="NextToBlue", RUN+="/usr/bin/systemctl --no-block start nexttoblue.service"
+DEVPATH=="/devices/platform/soc/3f980000.usb/usb1/1-1/1-1.?/1-1.?.3/1-1.?.3:1.0/sound/card?", ATTR{id}="AcrossFromBlue", RUN+="/usr/bin/systemctl --no-block start acrossfromblue.service"
+
+LABEL="my_usb_audio_end"

@@ -1,0 +1,9 @@
+[Unit]
+Description=For NextToBlue alsa ndi streamer
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/alsa-ndi-stream hw:NextToBlue,0 MicTwo
+
+[Install]
+WantedBy=multi-user.target

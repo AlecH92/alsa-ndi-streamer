@@ -1,0 +1,9 @@
+[Unit]
+Description=For BlueLight alsa ndi streamer
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/alsa-ndi-stream hw:BlueLight,0 MicOne
+
+[Install]
+WantedBy=multi-user.target
